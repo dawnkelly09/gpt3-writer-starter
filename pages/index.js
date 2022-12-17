@@ -5,7 +5,7 @@ import nuggImage from '../assets/Nuggs.png';
 import { useState } from 'react';
 import styled from '@emotion/styled';
 
-// EXAMPLE ONLY
+// EXAMPLE ONLY - how to use styled components with a html component
 const Button = styled.button`
   padding: 32px;
   background-color: hotpink;
@@ -18,6 +18,8 @@ const Button = styled.button`
   }
 `;
 
+// How to use styled components with ANY component
+//Add any styles you want for the image here
 const LogoImage = styled(Image)`
   height: 200px;
   width: 200px;
@@ -63,7 +65,7 @@ const Home = () => {
         <div className="header">
           <div className="header-title">
             <div className="header-layout">
-              <LogoImage src={nuggImage} />
+              <LogoImage src={nuggImage} alt="Nugg Logo" />
               <h1>Nugg's Strain Finder</h1>
             </div>
           </div>
