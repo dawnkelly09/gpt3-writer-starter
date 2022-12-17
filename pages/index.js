@@ -44,26 +44,38 @@ const callGenerateEndpoint = async () => {
             <h1>Nugg's Strain Finder</h1>
           </div>
           <div className="header-subtitle">
-            <h2>Let Nugg, your virtual budtender, help you find your ideal strain!</h2>
-          </div>
-          <div className="user-instructions">
-            <h3>For best results, ask your question just like you would if you were talking with Nugg in person!</h3>
+            <h2>Let Nugg, your virtual budtender, know what you're looking for from your ideal strain!</h2>
           </div>
         </div>
         <div className="prompt-container">
           <textarea 
             className="prompt-box"
-            placeholder="Type your desired effect or symptom relief need here..."
+            placeholder="What can Nugg help you find today?"
             value={userInput}
             onChange={onUserChangedText} 
             />
           <div className="prompt-buttons">
-            <a className="generate-button" onClick={callGenerateEndpoint}>
+          <a
+            className={isGenerating ? 'generate-button loading' : 'generate-button'}
+            onClick={callGenerateEndpoint}
+          >
               <div className="generate">
-                <p>Ask Nugg</p>
+                {isGenerating ? <span className="loader"></span> : <p>Ask Nugg</p>}
               </div>
             </a>
           </div>
+          {apiOutput && (
+          <div className="output">
+          <div className="output-header-container">
+            <div className="output-header">
+              <h3>Nugg says...</h3>
+            </div>
+          </div>
+          <div className="output-content">
+            <p>{apiOutput}</p>
+          </div>
+        </div>
+          )}
         </div>
       </div>
       <div className="badge-container grow">
