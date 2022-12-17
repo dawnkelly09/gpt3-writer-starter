@@ -1,6 +1,7 @@
 import Head from 'next/head'
 import Image from 'next/image'
 import buildspaceLogo from '../assets/buildspace-logo.png'
+//import nuggImage from '../assets/Nuggs.png'
 import { useState } from 'react'
 
 const Home = () => {
@@ -45,9 +46,11 @@ const callGenerateEndpoint = async () => {
           </div>
           <div className="header-subtitle">
             <h2>Let Nugg, your virtual budtender, know what you're looking for from your ideal strain!</h2>
+            
           </div>
         </div>
         <div className="prompt-container">
+          
           <textarea 
             className="prompt-box"
             placeholder="What can Nugg help you find today?"
@@ -79,6 +82,7 @@ const callGenerateEndpoint = async () => {
         </div>
       </div>
       <div className="badge-container grow">
+          
         <a
           href="https://buildspace.so/builds/ai-writer"
           target="_blank"
