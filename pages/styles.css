@@ -10,7 +10,8 @@ body {
     display: flex;
     place-content: center flex-start;
     align-items: center;
-    background-color: rgb(0, 0, 0);
+    background-color: whitesmoke;
+    
     flex-flow: column nowrap;
     gap: 10px;
     height: 100vh;
@@ -40,7 +41,7 @@ body {
     flex-direction: column;
     width: 100%;
     align-items: center;
-    color: #FFF
+    color: black
 }
 
 .header-title {
@@ -63,9 +64,19 @@ body {
     font-style: normal;
     font-weight: 700;
     line-height: 1.4em;
-    color: rgba(255, 255, 255, 0.75);
+    color: black;
 }
-
+.nav-container{
+    display: flex;
+    flex-direction: row;
+    
+    position: sticky;
+    left: 20px;
+    
+}
+.nav-logo{
+    max-height: 40px;
+}
 .prompt-container {
     place-content: flex-end center;
     align-items: center;
@@ -76,15 +87,21 @@ body {
     height: min-content;
     padding: 0px;
     width: min-content;
+    border-bottom-width: 2px;
+    border-color: rgba(41, 39, 39, 0);
+    border-left-width: 2px;
+    border-right-width: 2px;
+    border-style: solid;
+    border-top-width: 2px;
 }
 
 .prompt-box {
-    border-bottom-width: 1px;
-    border-color: rgba(255, 255, 255, 0.1);
-    border-left-width: 1px;
-    border-right-width: 1px;
+    border-bottom-width: 2px;
+    border-color: rgba(82, 74, 74, 0);
+    border-left-width: 2px;
+    border-right-width: 2px;
     border-style: solid;
-    border-top-width: 1px;
+    border-top-width: 2px;
     place-content: flex-start;
     align-items: flex-start;
     background-color: rgba(255, 255, 255, 0.05);
@@ -108,18 +125,20 @@ body {
     letter-spacing: 0px;
     line-height: 1.6em;
     text-align: start;
-    color: rgba(255, 255, 255, 0.75);
+    color: rgba(43, 48, 52, 0.75);
     text-decoration: none;
     text-transform: none;
+    background-color: #D9D9D9;
 }
 
 textarea {
     font-family: 'Manrope', sans-serif;
+    
 }
 
 
 .prompt-box:focus {
-    border-color:rgba(255, 255, 255, 0.75)
+    border-color:#0099CC
 }
 
 
@@ -172,7 +191,7 @@ textarea {
 .generate-button {
     place-content: flex-start;
     align-items: flex-start;
-    background-color: rgb(24, 122, 34);
+    background-color: #0099CC;
     border-radius: 100px;
     display: flex;
     flex: 0 0 auto;

@@ -1,6 +1,7 @@
 import Head from 'next/head'
 import Image from 'next/image'
 import buildspaceLogo from '../assets/buildspace-logo.png'
+import logo from '../assets/logo.png'
 //import nuggImage from '../assets/Nuggs.png'
 import { useState } from 'react'
 
@@ -37,15 +38,20 @@ const callGenerateEndpoint = async () => {
   return (
     <div className="root">
       <Head>
-        <title>Nugg's Strain Finder</title>
+        <title>Cash'd</title>
       </Head>
       <div className="container">
+        <div className='nav-container'>
+          <div className='nav-logo'>
+            <Image src={logo} alt="Cash'd logo" />
+          </div>
+        </div>
         <div className="header">
           <div className="header-title">
-            <h1>Nugg's Strain Finder</h1>
+            <h1>Cash'd Strain Finder</h1>
           </div>
           <div className="header-subtitle">
-            <h2>Let Nugg, your virtual budtender, know what you're looking for from your ideal strain!</h2>
+            <h2>Let your virtual budtender know what you're looking for from your ideal strain!</h2>
             
           </div>
         </div>
@@ -53,7 +59,7 @@ const callGenerateEndpoint = async () => {
           
           <textarea 
             className="prompt-box"
-            placeholder="What can Nugg help you find today?"
+            placeholder="What can Cash'd help you find today?"
             value={userInput}
             onChange={onUserChangedText} 
             />
@@ -63,7 +69,7 @@ const callGenerateEndpoint = async () => {
             onClick={callGenerateEndpoint}
           >
               <div className="generate">
-                {isGenerating ? <span className="loader"></span> : <p>Ask Nugg</p>}
+                {isGenerating ? <span className="loader"></span> : <p>Suggest A Strain</p>}
               </div>
             </a>
           </div>
@@ -71,7 +77,7 @@ const callGenerateEndpoint = async () => {
           <div className="output">
           <div className="output-header-container">
             <div className="output-header">
-              <h3>Nugg says...</h3>
+              <h3>Our suggestion:</h3>
             </div>
           </div>
           <div className="output-content">
