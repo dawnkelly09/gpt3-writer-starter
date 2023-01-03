@@ -34,36 +34,36 @@ const LogoImage = styled(Image)`
 `;
 >>>>>>> d31d6ed7a5e07e485163bd68c948e047b2ad04f4
 
-const Home = () => {
-  const [userInput, setUserInput] = useState('');
-  const [apiOutput, setApiOutput] = useState('');
-  const [isGenerating, setIsGenerating] = useState(false);
+function Home() {
+  const [userInput, setUserInput] = useState('')
+  const [apiOutput, setApiOutput] = useState('')
+  const [isGenerating, setIsGenerating] = useState(false)
 
   const callGenerateEndpoint = async () => {
-    setIsGenerating(true);
+    setIsGenerating(true)
 
-    console.log('Calling OpenAI...');
+    console.log('Calling OpenAI...')
     const response = await fetch('/api/generate', {
       method: 'POST',
       headers: {
         'Content-Type': 'application/json',
       },
       body: JSON.stringify({ userInput }),
-    });
+    })
 
-    const data = await response.json();
-    const { output } = data;
-    console.log('OpenAI replied...', output.text);
+    const data = await response.json()
+    const { output } = data
+    console.log('OpenAI replied...', output.text)
 
-    setApiOutput(`${output.text}`);
-    setIsGenerating(false);
-  };
+    setApiOutput(`${output.text}`)
+    setIsGenerating(false)
+  }
 
   const onUserChangedText = (event) => {
     //TEST: text input is rendering to textbox
     //console.log(event.target.value)
-    setUserInput(event.target.value);
-  };
+    setUserInput(event.target.value)
+  }
 
   return (
     <div className="root">
@@ -77,9 +77,10 @@ const Home = () => {
           </div>
         </div>
         <div className="header">
-          <div className="header-title">
-<<<<<<< HEAD
-            <h1>Cash'd Strain Finder</h1>
+          <div className="header-title"></></></></>)
+
+  <h1>Cash'd Strain Finder</h1>
+}
           </div>
           <div className="header-subtitle">
             <h2>Let your virtual budtender know what you're looking for from your ideal strain!</h2>
