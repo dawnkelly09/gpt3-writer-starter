@@ -6,15 +6,18 @@ const Home = () => {
   return (
     <div className="root">
       <Head>
-        <title>GPT-3 Writer | buildspace</title>
+        <title>Cash'd</title>
       </Head>
       <div className="container">
         <div className="header">
           <div className="header-title">
-            <h1>sup, insert your headline here</h1>
+            <h1>Welcome to Cash'd</h1>
           </div>
           <div className="header-subtitle">
-            <h2>insert your subtitle here</h2>
+            <h2>Cash'd gives you easy to use tools to find your ideal cannabis strain</h2>
+          </div>
+          <div>
+            <p>Use our virtual budtender to find your ideal strain. Just tell us about your desired cannabis experience and effects</p>
           </div>
         </div>
       </div>
